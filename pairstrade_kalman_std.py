@@ -3,8 +3,8 @@ import numpy as np
 from math import floor
 
 def initialize(context):
-  # context.tickers = ['TLT', 'IEI']
-  context.tickers = ['EWA', 'EWC']
+  context.tickers = ['TLT', 'IEI']
+  # context.tickers = ['EWA', 'EWC']
   # context.tickers = ['COKE', 'PEP']
   context.time = None
   context.latest_prices = np.array([-1.0, -1.0])
