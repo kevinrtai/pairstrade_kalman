@@ -89,6 +89,10 @@ if __name__ == "__main__":
     prices = DataReader(
         etfs, 'yahoo', start_date, end_date
     )['Adj Close']
+    print(np.vstack(
+        [prices[etfs[0]], np.ones(prices[etfs[0]].shape)]
+    ).T[:, np.newaxis])
+
 
     draw_date_coloured_scatterplot(etfs, prices)
     state_means, state_covs = calc_slope_intercept_kalman(etfs, prices)
